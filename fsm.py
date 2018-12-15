@@ -1,7 +1,9 @@
 # -*- coding: UTF-8 -*-
+#!/usr/bin/env python3
 from transitions.extensions import GraphMachine
 
 from utils import send_text_message
+from utils import send_image_url
 
 
 class TocMachine(GraphMachine):
@@ -83,6 +85,7 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "你選錯了，只能選海港，這就是自助餐一言堂狀態機。")
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         self.go_back()
 
     def on_enter_state2(self, event):
@@ -95,7 +98,8 @@ class TocMachine(GraphMachine):
         #print("I'm entering state1")
 
         sender_id = event['sender']['id']
-        responese = send_text_message(sender_id, "遊戲的一開始，請您輸入想吃的自助餐，[大八]？[海港]？[香格里拉]？")
+        responese = send_text_message(sender_id, "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？")
+        responese = send_image_url(sender_id,"https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg" )#TEST 為甚麼你不問神奇海螺ㄋ
         self.go_back()
 
     def on_enter_state4(self, event):
@@ -103,6 +107,7 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "叭叭！！！！下午茶很難吃捏！打沒！掰掰！")
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         self.go_back()
 
     def on_enter_state5(self, event):
@@ -122,6 +127,7 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "孟婆：「嘻嘻您吃了剩魚片所以拉到壞掉，重新輪迴，喝杯孟婆湯吧。（強灌）」")#回答[剩餘片]的後果->回到user
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         self.go_back()
 
     def on_enter_state8(self, event):
@@ -129,6 +135,7 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "經理：「濁水溪有鮭魚！我說得算！給我滾出去！海港不要有你這種客人！」")#回答[沒有]鮭魚的後果->回到user
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         self.go_back()
 
     def on_enter_state9(self, event):
@@ -142,6 +149,7 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "經理：「不要？給我滾出去！海港不要有你這種客人！」")#回答[不要]環遊世界的後果->回到user
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         self.go_back()
 
     def on_enter_state11(self, event):
@@ -149,14 +157,10 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "吃一次海港，寫成了亙股雋永的淒美愛情故事，所以請大家多多支持海港（按：海港與作者沒有任何關係）")#回答[要]環遊世界的後果->回到user
+        responese = send_image_url(sender_id,"https://sayingimages.com/wp-content/uploads/Lily-the-Swim-Pup-Love-You.jpg" )#TEST I LOVE U
         self.go_back()
 
 
 
 
-    def on_exit_state1(self):
-        print('Leaving state1')
-
-    def on_exit_state2(self):
-        print('Leaving state2')
-
+   

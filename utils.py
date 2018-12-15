@@ -17,6 +17,26 @@ def send_text_message(id, text):
         print("Unable to send message: " + response.text)
     return response
 
+def send_image_url(name,text): #test.
+	url="{0}/me/messages?access_token={1}".format(GRAPH_URL, ACCESS_TOKEN)
+	ctx={
+		"recipient":{
+			"id":name
+		},
+		"message":{
+			"attachment":{
+				"type":"image",
+				"payload":{
+					"url":text
+				}
+			}
+		}
+	}
+	response=requests.post(url,json=ctx)
+	if response.status_code!=200:
+		print("Unable to send message: "+response.text)
+	return response
+
 
 """
 def send_image_url(id, img_url):

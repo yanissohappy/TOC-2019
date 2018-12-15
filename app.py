@@ -17,8 +17,7 @@ machine = TocMachine(
         'state8',
         'state9',
         'state10',
-        'state11',
-        'state12'
+        'state11'
     ],
     transitions=[
         {
@@ -66,25 +65,25 @@ machine = TocMachine(
         {
             'trigger': 'advance',
             'source': 'state6',
-            'dest': 'state8',
+            'dest': 'state9',
             'conditions': 'is_going_to_state8'
         },
         {
             'trigger': 'advance',
             'source': 'state6',
-            'dest': 'state9',
+            'dest': 'state8',
             'conditions': 'is_going_to_state9'
         },
         {
             'trigger': 'advance',
             'source': 'state9',
-            'dest': 'state10',
+            'dest': 'state11',
             'conditions': 'is_going_to_state10'
         },
         {
             'trigger': 'advance',
             'source': 'state9',
-            'dest': 'state11',
+            'dest': 'state10',
             'conditions': 'is_going_to_state11'
         },
         {
@@ -141,4 +140,5 @@ def show_fsm():
 
 
 if __name__ == "__main__":
-    run(host="localhost", port=5000, debug=True, reloader=True)
+    show_fsm()
+    run(host="localhost", port=4000, debug=True, reloader=True)
