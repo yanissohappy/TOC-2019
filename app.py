@@ -141,4 +141,4 @@ def show_fsm():
 
 if __name__ == "__main__":
     show_fsm()
-    run(host="localhost", port=4000, debug=True, reloader=True)
+    run(host="localhost", port=5000, debug=True, reloader=True)

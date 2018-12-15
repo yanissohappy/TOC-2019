@@ -16,7 +16,7 @@ class TocMachine(GraphMachine):
     def is_going_to_state1(self, event):
         if event.get("message"):
             text = event['message']['text']
-            return text.lower() == '吃大八' or '吃香格里拉' #輸入這兩個是很不可以的，只有海港比較好吃，這就是自助餐一言堂
+            return text.lower() == '吃大八' or text.lower() == '吃香格里拉' #輸入這兩個是很不可以的，只有海港比較好吃，這就是自助餐一言堂
         return False
 
     def is_going_to_state2(self, event):
@@ -120,7 +120,7 @@ class TocMachine(GraphMachine):
         #print("I'm entering state1")
 
         sender_id = event['sender']['id']
-        responese = send_text_message(sender_id, "經理走過來，說：「您吃的鮭魚生魚片來自濁水溪，是個不可多得的珍貴食材！你[知道]或[不知道]看過濁水溪的鮭魚嗎？」")
+        responese = send_text_message(sender_id, "經理走過來，說：「您吃的鮭魚生魚片來自濁水溪，是個不可多得的珍貴食材！你[知道]或[不知道]濁水溪有鮭魚？」")
 
     def on_enter_state7(self, event):
         #print("I'm entering state1")
