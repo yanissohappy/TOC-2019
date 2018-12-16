@@ -28,6 +28,42 @@ machine = TocMachine(
         },
         {
             'trigger': 'advance',
+            'source': 'state1',
+            'dest': 'state1_1',
+            'conditions': 'is_going_to_state1_1'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state1',
+            'dest': 'state1_2',
+            'conditions': 'is_going_to_state1_2'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state1_1',
+            'dest': 'state1_3',
+            'conditions': 'is_going_to_state1_3'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state1_1',
+            'dest': 'state1_4',
+            'conditions': 'is_going_to_state1_4'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state1_2',
+            'dest': 'state1_5',
+            'conditions': 'is_going_to_state1_3'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state1_2',
+            'dest': 'state1_6',
+            'conditions': 'is_going_to_state1_4'
+        },#####
+        {
+            'trigger': 'advance',
             'source': 'user',
             'dest': 'state2',
             'conditions': 'is_going_to_state2'
@@ -37,6 +73,12 @@ machine = TocMachine(
             'source': 'user',
             'dest': 'state3',
             'conditions': 'is_going_to_state3'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'user',
+            'dest': 'state12',
+            'conditions': 'is_going_to_state12'
         },
         {
             'trigger': 'advance',
@@ -85,11 +127,19 @@ machine = TocMachine(
             'source': 'state9',
             'dest': 'state10',
             'conditions': 'is_going_to_state11'
-        },
+        },##################
+        {
+            'trigger': 'advance',
+            'source': 'state12',
+            'dest': 'state1',
+        },##################
         {
             'trigger': 'go_back',
             'source': [
-                'state1',
+                'state1_3',
+                'state1_4',
+                'state1_5',
+                'state1_6',
                 'state3',
                 'state4',
                 'state7',

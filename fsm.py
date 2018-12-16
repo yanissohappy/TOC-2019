@@ -16,8 +16,32 @@ class TocMachine(GraphMachine):
     def is_going_to_state1(self, event):
         if event.get("message"):
             text = event['message']['text']
-            return text.lower() == '吃大八' or text.lower() == '吃香格里拉' #輸入這兩個是很不可以的，只有海港比較好吃，這就是自助餐一言堂
+            return text.lower() == '吃大八'#輸入這兩個是很不可以的，只有海港比較好吃，這就是自助餐一言堂
         return False
+		
+    def is_going_to_state1_1(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '自助餐'
+        return False		
+		
+    def is_going_to_state1_2(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '牛排館'
+        return False		
+		
+    def is_going_to_state1_3(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '4人'
+        return False			
+		
+    def is_going_to_state1_4(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '1人'
+        return False					
 
     def is_going_to_state2(self, event):
         if event.get("message"):
@@ -30,6 +54,12 @@ class TocMachine(GraphMachine):
             text = event['message']['text']
             return text.lower() == '使用說明'
         return False
+
+    def is_going_to_state12(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '吃香格里拉' 
+        return False        
 
     def is_going_to_state4(self, event):
         if event.get("message"):
@@ -84,9 +114,64 @@ class TocMachine(GraphMachine):
         #print("I'm entering state1")
 
         sender_id = event['sender']['id']
-        responese = send_text_message(sender_id, "你選錯了，只能選海港，這就是自助餐一言堂狀態機。")
-        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
+        responese = send_text_message(sender_id, "你走進去了大八，詢問：「請問[自助餐]/[牛排館]有開嗎？」")
+        #responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
+        
+		
+    def on_enter_state1_1(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "服務生：「有呀，請讓我帶領您前往那兒。您今天幾人用餐？[4人]/[1人]」")
+        #responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
+        		
+    def on_enter_state1_2(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "服務生：「有呀，請讓我帶領您前往那兒。您今天幾人用餐？[4人]/[1人]」")
+        #responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
+  
+    def on_enter_state1_3(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "服務生：「4不吉利耶，我們公司拒絕您用餐哦。」")#甚麼糟糕的公司
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL  
         self.go_back()
+		
+    def on_enter_state1_4(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "服務生：「（murmur）好可憐喔...一個人吃東西。」你聽到了，說：「你們甚麼爛公司！我要走人了。」")#甚麼糟糕的公司
+        responese = send_text_message(sender_id, "服務生：")        
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL  
+        self.go_back()
+
+    def on_enter_state1_5(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "服務生：「4不吉利耶，我們公司拒絕您用餐哦。」你聽到了：「（攻擊服務生HP-10000）」")#甚麼糟糕的公司
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL  
+        self.go_back()
+
+    def on_enter_state1_6(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "服務生：「（murmur）好可憐喔...一個人吃東西。」你聽到了，說：「（攻擊服務生）別小看邊緣人！」")#甚麼糟糕的公司
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL  
+        self.go_back()				
+				
+    def on_enter_state12(self, event):
+        #print("I'm entering state1")
+
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，然後你走出香格里拉，邁向海港。")
+        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
+        self.go_back()        
 
     def on_enter_state2(self, event):
         #print("I'm entering state1")

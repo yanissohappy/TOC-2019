@@ -27,12 +27,12 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 	* Input: "吃大八"
 		* Reply: "你選錯了，只能選海港，這就是自助餐一言堂狀態機。"
 		* Reply: <img src="https://i.imgflip.com/13jurj.jpg" width = "300" height = "220"/>
-		* Next State: state1→user
+		* Next State: state1
 		
 	* Input: "吃香格里拉"
-		* Reply: "你選錯了，只能選海港，這就是自助餐一言堂狀態機。"
+		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)"
 		* Reply: <img src="https://i.imgflip.com/13jurj.jpg" width = "300" height = "220"/>
-		* Next State: state1→user
+		* Next State: state12
 
 	* Input: "吃海港"
 		* Reply: "您真是會選擇，好吃的自助餐在海港，猜猜看好吃的時段是甚麼時候？[下午茶]或[晚餐]？"
