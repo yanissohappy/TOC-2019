@@ -4,12 +4,12 @@ import requests
 import os
 
 GRAPH_URL="https://graph.facebook.com/v2.6"
-PAGE_TOKEN="EAAd1FPaRVQgBAOQtOQ2oZCBISe0ebdR2V0ShWZBU8q0QpKb8WYWxnTxWiWrZBIZCillpdU62K4lGJUR1KlCc5MvHpgFl70SX5HITdBYXtCD2AlCqSwtaEbqIV322WKYBOx9C11DDn72F1tWr89ovzJbNs5hCe3v6wdZCryMnQ3QZDZD"
-VERIFY_TOKEN="test"
+PAGE_TOKEN="EAAd1FPaRVQgBALl4IYhJWidsntcCJIdSdXTA0NSiUUocSZCKjf1w5ecf0FHqD64pPTuvnPjXRAQH4qu1HI2N9OorVOHFusR8GDiVl0AeBbrtNwznlHhOt0wZCF0YZCpm3jBXeZBlw31DWZC0xRfzSUdAV9uWaci6oeqVjomZCHLAZDZD"
+VERIFY_TOKEN="everydayishappyday"
 """
 ACCESS_TOKEN=os.environ["EAAd1FPaRVQgBAOQtOQ2oZCBISe0ebdR2V0ShWZBU8q0QpKb8WYWxnTxWiWrZBIZCillpdU62K4lGJUR1KlCc5MvHpgFl70SX5HITdBYXtCD2AlCqSwtaEbqI"]
 VERIFY_TOKEN=os.environ["everydayishappyday"]
-PORT=os.environ["4000"]
+PORT=os.environ["5000"]
 """
 
 def send_text_message(name,text):
@@ -132,4 +132,4 @@ def show_fsm():
 	return static_file("fsm.png",root="./",mimetype="image/png")
 if __name__ == "__main__":
 	show_fsm()
-	run(host="localhost",port=4000,debug=True)
+	run(host="localhost",port=5000,debug=True)
