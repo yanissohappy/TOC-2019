@@ -102,5 +102,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 		* Reply: "經理：「不要？給我滾出去！海港不要有你這種客人！」"
 		* Reply: <img src="https://i.imgflip.com/13jurj.jpg" width = "300" height = "220"/>
 		* Next State: state10→user		
-		
+
+* **state1_3** or **state1_4** or **state1_5** or **state1_6** or **state3** or **state4** or **state7** or **state8** or **state10** or **state11**
+	* Next State: user		
 		
