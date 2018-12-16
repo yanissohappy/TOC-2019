@@ -115,7 +115,6 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "你走進去了大八，詢問：「請問[自助餐]/[牛排館]有開嗎？」")
-        #responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         
 		
     def on_enter_state1_1(self, event):
@@ -137,6 +136,7 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "服務生：「4不吉利耶，我們公司拒絕您用餐哦。」")#甚麼糟糕的公司
+        responese = send_text_message(sender_id, "服務生：")          
         responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL  
         self.go_back()
 		
@@ -170,7 +170,6 @@ class TocMachine(GraphMachine):
 
         sender_id = event['sender']['id']
         responese = send_text_message(sender_id, "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，然後你走出香格里拉，邁向海港。")
-        responese = send_image_url(sender_id,"https://i.imgflip.com/13jurj.jpg" )#TEST YOU GO TO HELL
         self.go_back()        
 
     def on_enter_state2(self, event):
