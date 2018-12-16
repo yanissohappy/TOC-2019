@@ -1,6 +1,6 @@
 # TOC Project 2018
 
-<p align="right">----- Topic:超展開奇片式自助餐有限狀態機 by Yan</p>
+### Topic:超展開奇片式自助餐有限狀態機
 
 Template Code for TOC Project 2018
 
@@ -9,6 +9,9 @@ A Facebook messenger bot based on a finite state machine
 
 ## Finite State Machine
 ![fsm](./img/fsm.png)
+
+## Motivation
+原本是想要做單純的推薦食物名單，可是不知怎地做著做著就超展開了。
 
 ## Usage
 The initial state is set to `user`.
