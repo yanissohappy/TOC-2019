@@ -1,6 +1,6 @@
 # TOC Project 2018
 
-### Topic:超展開奇片式自助餐有限狀態機
+<p align="right">### Topic:超展開奇片式自助餐有限狀態機</p>
 
 Template Code for TOC Project 2018
 
