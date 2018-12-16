@@ -1,4 +1,5 @@
 # TOC Project 2018
+
 ###Topic:超展開奇片式自助餐有限狀態機
 
 Template Code for TOC Project 2018
@@ -17,17 +18,17 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 * user
 	* Input: "使用說明"
 		* Reply: "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？"
-		* Reply: ![為甚麼你不問神奇海螺呢](https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg)
+		* Reply: ![為甚麼你不問神奇海螺呢](https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg){:height="40%" width="40%"}
 		* Next State: state3→user
 
 	* Input: "吃大八"
 		* Reply: "你選錯了，只能選海港，這就是自助餐一言堂狀態機。"
-		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg)
+		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg){:height="40%" width="40%"}
 		* Next State: state1→user
 		
 	* Input: "吃香格里拉"
 		* Reply: "你選錯了，只能選海港，這就是自助餐一言堂狀態機。"
-		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg)
+		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg){:height="40%" width="40%"}
 		* Next State: state1→user
 
 	* Input: "吃海港"
@@ -36,7 +37,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 * state2
 	* Input: "下午茶"
 		* Reply: "叭叭！！！！下午茶很難吃捏！打沒！掰掰！"
-		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg)
+		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg){:height="40%" width="40%"}
 		* Next State: state4→user
 
 	* Input: "晚餐"
@@ -49,7 +50,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 
 	* Input: "剩魚片"
 		* Reply: "孟婆：「嘻嘻您吃了剩魚片所以拉到壞掉，重新輪迴，喝杯孟婆湯吧。（強灌）」"
-		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg)
+		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg){:height="40%" width="40%"}
 		* Next State: state7→user		
 * state6
 	* Input: "知道"
@@ -58,16 +59,16 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 
 	* Input: "不知道"
 		* Reply: "經理：「濁水溪有鮭魚！我說得算！給我滾出去！海港不要有你這種客人！」"
-		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg)
+		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg){:height="40%" width="40%"}
 		* Next State: state8→user
 * state9		
 	* Input: "要"
 		* Reply: "吃一次海港，寫成了亙股雋永的淒美愛情故事，所以請大家多多支持海港（按：海港與作者沒有任何關係）"
-		* Reply: ![Iloveu](https://sayingimages.com/wp-content/uploads/Lily-the-Swim-Pup-Love-You.jpg)
+		* Reply: ![Iloveu](https://sayingimages.com/wp-content/uploads/Lily-the-Swim-Pup-Love-You.jpg){:height="40%" width="40%"}
 		* Next State: state11→user
 
 	* Input: "不要"
 		* Reply: "經理：「不要？給我滾出去！海港不要有你這種客人！」"
-		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg)
+		* Reply: ![GO TO HELL](https://i.imgflip.com/13jurj.jpg){:height="40%" width="40%"}
 		* Next State: state10→user		
 		
