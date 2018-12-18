@@ -14,9 +14,9 @@ A Facebook messenger bot based on a finite state machine
 原本是想要做單純的推薦食物名單，可是不知怎地做著做著就超展開了。(惡搞魂覺醒)
 
 ## Finished Part
-* - [x] 所有的requirement 
-* - [x] Sending images 
-* - [x] 用Heroku部署FB Chatbot
+- [x] 所有的requirement 
+- [x] Sending images 
+- [x] 用Heroku部署FB Chatbot
 
 ## Usage
 The initial state is set to `user`.
