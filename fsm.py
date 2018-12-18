@@ -109,6 +109,11 @@ class TocMachine(GraphMachine):
             return text.lower() == '不要' #不環遊世界，經理會把你請出去（again 哪門子的經理？！）
         return False
 
+    def is_going_to_state13(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '故事情節' #不環遊世界，經理會把你請出去（again 哪門子的經理？！）
+        return False
 
     def on_enter_state1(self, event):
         #print("I'm entering state1")
@@ -182,9 +187,8 @@ class TocMachine(GraphMachine):
         #print("I'm entering state1")
 
         sender_id = event['sender']['id']
-        responese = send_text_message(sender_id, "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？")
+        responese = send_text_message(sender_id, "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？或是輸入[故事情節]了解故事走向。")
         responese = send_image_url(sender_id,"https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg" )#TEST 為甚麼你不問神奇海螺ㄋ
-        self.go_back()
 
     def on_enter_state4(self, event):
         #print("I'm entering state1")
@@ -244,7 +248,12 @@ class TocMachine(GraphMachine):
         responese = send_image_url(sender_id,"https://sayingimages.com/wp-content/uploads/Lily-the-Swim-Pup-Love-You.jpg" )#TEST I LOVE U
         self.go_back()
 
+    def on_enter_state13(self, event):
+        #print("I'm entering state1")
 
+        sender_id = event['sender']['id']
+        responese = send_text_message(sender_id, "作者:呵呵呵...故事您要自己玩出來的唷(姨母笑)這個bot是很逗趣(?)的，但是可能會玩到很生氣~請別玩到高血壓哦。(超讓人生氣)")#回答[要]環遊世界的後果->回到user
+        self.go_back()
 
 
    

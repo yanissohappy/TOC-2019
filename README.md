@@ -17,12 +17,13 @@ A Facebook messenger bot based on a finite state machine
 The initial state is set to `user`.
 
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
+建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
 
 * user
 	* Input: "使用說明"
-		* Reply: "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？"
+		* Reply: "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？或是輸入[故事情節]了解故事走向。"
 		* Reply: ![為甚麼你不問神奇海螺呢](https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg)
-		* Next State: state3→user
+		* Next State: state3
 
 	* Input: "吃大八"
 		* Reply: "你走進去了大八，詢問：「請問[自助餐]/[牛排館]有開嗎？」"
@@ -74,6 +75,10 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 	* Input: "晚餐"
 		* Reply: "對呀，選晚餐就對了，從現在開始您可以跟食物來個美好的邂逅，你要選擇[生魚片]還是[剩魚片]？"
 		* Next State: state5
+* state3
+	* Input: "故事情節"
+		* Reply: "作者:呵呵呵...故事您要自己玩出來的唷(姨母笑)這個bot是很逗趣(?)的，但是可能會玩到很生氣~請別玩到高血壓哦。(超讓人生氣)"
+		* Next State: state13→user
 * state5		
 	* Input: "生魚片"
 		* Reply: "經理走過來，說：「您吃的鮭魚生魚片來自濁水溪，是個不可多得的珍貴食材！你[知道]或[不知道]濁水溪有鮭魚？」"
@@ -103,6 +108,6 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 		* Reply: <img src="https://i.imgflip.com/13jurj.jpg" width = "300" height = "220"/>
 		* Next State: state10→user		
 
-* **state1_3** or **state1_4** or **state1_5** or **state1_6** or **state3** or **state4** or **state7** or **state8** or **state10** or **state11**
+* **state1_3** or **state1_4** or **state1_5** or **state1_6** or  **state4** or **state7** or **state8** or **state10** or **state11** or **state13**
 	* Next State: user		
 		
