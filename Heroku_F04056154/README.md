@@ -30,7 +30,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 		* Next State: state1
 		
 	* Input: "吃香格里拉"
-		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，並且你口中喊著：「[是]」然後你走出香格里拉，邁向海港。"
+		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，然後你走出香格里拉，邁向海港。"
 		* Next State: state12→state2
 
 	* Input: "吃海港"
