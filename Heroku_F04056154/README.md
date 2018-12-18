@@ -1,6 +1,6 @@
-# TOC Project 2018
+# 2018 計算理論期末專題 Theory of Computation Final Project 
 
-### Topic:超展開奇片式自助餐有限狀態機
+### Topic:[超展開奇片式自助餐有限狀態機](https://www.facebook.com/Yans-TOC-robot-571247746672227/)
 
 Template Code for TOC Project 2018
 
@@ -11,13 +11,19 @@ A Facebook messenger bot based on a finite state machine
 ![fsm](./fsm.png)
 
 ## Motivation
-原本是想要做單純的推薦食物名單，可是不知怎地做著做著就超展開了。
+原本是想要做單純的推薦食物名單，可是不知怎地做著做著就超展開了。(惡搞魂覺醒)
+
+## Finished Part
+- [x] 所有的requirement 
+- [x] Sending images 
+- [x] 用Heroku部署FB Chatbot
 
 ## Usage
 The initial state is set to `user`.
 
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
+
+:octocat: 建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
 
 * user
 	* Input: "使用說明"
@@ -30,7 +36,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 		* Next State: state1
 		
 	* Input: "吃香格里拉"
-		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，然後你走出香格里拉，邁向海港。"
+		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，並且你口中喊著：「[是]」然後你走出香格里拉，邁向海港。"
 		* Next State: state12→state2
 
 	* Input: "吃海港"
