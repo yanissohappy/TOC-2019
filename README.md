@@ -22,7 +22,8 @@ A Facebook messenger bot based on a finite state machine
 The initial state is set to `user`.
 
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
+
+:octocat: 建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
 
 * user
 	* Input: "使用說明"
