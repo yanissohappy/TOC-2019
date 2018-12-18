@@ -140,6 +140,7 @@ machine = TocMachine(
             'trigger': 'advance',
             'source': 'state12',
             'dest': 'state2',
+            'conditions': 'is_going_to_state14'
         },
         {
             'trigger': 'advance',

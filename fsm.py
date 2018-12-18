@@ -112,8 +112,15 @@ class TocMachine(GraphMachine):
     def is_going_to_state13(self, event):
         if event.get("message"):
             text = event['message']['text']
-            return text.lower() == '故事情節' #不環遊世界，經理會把你請出去（again 哪門子的經理？！）
+            return text.lower() == '故事情節'
         return False
+
+    def is_going_to_state14(self, event):
+        if event.get("message"):
+            text = event['message']['text']
+            return text.lower() == '是' 
+        return False        
+
 
     def on_enter_state1(self, event):
         #print("I'm entering state1")
@@ -174,8 +181,7 @@ class TocMachine(GraphMachine):
         #print("I'm entering state1")
 
         sender_id = event['sender']['id']
-        responese = send_text_message(sender_id, "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，然後你走出香格里拉，邁向海港。")
-        self.go_back()        
+        responese = send_text_message(sender_id, "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，並且你口中喊著：「[是]」然後你走出香格里拉，邁向海港。")      
 
     def on_enter_state2(self, event):
         #print("I'm entering state1")
