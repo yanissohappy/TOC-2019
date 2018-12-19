@@ -1,4 +1,4 @@
-# 2018 計算理論期末專題 Theory of Computation Final Project 
+# 2018 計算理論期末專題 TOC Final Project in HEROKU
 
 ### Topic:[超展開奇片式自助餐有限狀態機](https://www.facebook.com/Yans-TOC-robot-571247746672227/)
 
@@ -29,7 +29,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 	* Input: "使用說明"
 		* Reply: "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？或是輸入[故事情節]了解故事走向。"
 		* Reply: ![為甚麼你不問神奇海螺呢](https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg)
-		* Next State: state3
+		* Next State: state1/state2/state12/state3
 
 	* Input: "吃大八"
 		* Reply: "你走進去了大八，詢問：「請問[自助餐]/[牛排館]有開嗎？」"

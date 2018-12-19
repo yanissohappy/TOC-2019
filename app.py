@@ -149,6 +149,24 @@ machine = TocMachine(
             'conditions': 'is_going_to_state13'
         },
         {
+            'trigger': 'advance',
+            'source': 'state3',
+            'dest': 'state2',
+            'conditions': 'is_going_to_state2'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state3',
+            'dest': 'state1',
+            'conditions': 'is_going_to_state1'
+        },
+        {
+            'trigger': 'advance',
+            'source': 'state3',
+            'dest': 'state12',
+            'conditions': 'is_going_to_state12'
+        },
+        {
             'trigger': 'go_back',
             'source': [
                 'state1_3',
