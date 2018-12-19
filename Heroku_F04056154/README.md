@@ -37,7 +37,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 		
 	* Input: "吃香格里拉"
 		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，並且你口中喊著：「[是]」然後你走出香格里拉，邁向海港。"
-		* Next State: state12→state2
+		* Next State: state12
 
 	* Input: "吃海港"
 		* Reply: "您真是會選擇，好吃的自助餐在海港，猜猜看好吃的時段是甚麼時候？[下午茶]或[晚餐]？"
@@ -112,7 +112,13 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 	* Input: "不要"
 		* Reply: "經理：「不要？給我滾出去！海港不要有你這種客人！」"
 		* Reply: <img src="https://i.imgflip.com/13jurj.jpg" width = "300" height = "220"/>
-		* Next State: state10→user		
+		* Next State: state10→user	
+
+* state12		
+	* Input: "是"
+		* Reply: "您真是會選擇，好吃的自助餐在海港，猜猜看好吃的時段是甚麼時候？[下午茶]或[晚餐]？"
+		* Next State: state2
+	
 
 * **state1_3** or **state1_4** or **state1_5** or **state1_6** or  **state4** or **state7** or **state8** or **state10** or **state11** or **state13**
 	* Next State: user		
