@@ -3,7 +3,9 @@
 ### Topic:[超展開奇片式自助餐有限狀態機](https://www.facebook.com/Yans-TOC-robot-571247746672227/)
 
 A Facebook messenger bot based on a finite state machine
-
+在Heroku_F04056154裡面的資料是deploy到heroku裡的版本，現在機器人的對話是以在Heroku_F04056154裡的資料為準
+而在這個資料夾的版本是我一開始利用ngrok測試的版本。
+兩者的對話內容都一樣的。
 
 ## Finite State Machine
 ![fsm](./fsm.png)
