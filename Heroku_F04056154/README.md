@@ -1,6 +1,8 @@
-# 2018 計算理論期末專題 TOC Final Project in HEROKU
+# TOC Project 2018
 
-### Topic:[超展開奇片式自助餐有限狀態機](https://www.facebook.com/Yans-TOC-robot-571247746672227/)
+### Topic:超展開奇片式自助餐有限狀態機
+
+Template Code for TOC Project 2018
 
 A Facebook messenger bot based on a finite state machine
 
@@ -9,33 +11,27 @@ A Facebook messenger bot based on a finite state machine
 ![fsm](./fsm.png)
 
 ## Motivation
-原本是想要做單純的推薦食物名單，可是不知怎地做著做著就超展開了。(惡搞魂覺醒)
-
-## Finished Part
-- [x] 所有的base requirement 
-- [x] Sending images 
-- [x] 用Heroku部署FB Chatbot
+原本是想要做單純的推薦食物名單，可是不知怎地做著做著就超展開了。
 
 ## Usage
 The initial state is set to `user`.
 
 Every time `user` state is triggered to `advance` to another state, it will `go_back` to `user` state after the bot replies corresponding message.
-
-:octocat: 建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
+建議您一開始輸入`使用說明`方便了解一開始輸入甚麼，每一個reply都會用[]給予回答的提示<3
 
 * user
 	* Input: "使用說明"
 		* Reply: "遊戲的一開始，請您輸入想吃的自助餐，[吃大八]？[吃海港]？[吃香格里拉]？或是輸入[故事情節]了解故事走向。"
 		* Reply: ![為甚麼你不問神奇海螺呢](https://img.moegirl.org/common/thumb/7/7b/SpongeBob_SquarePants.jpg/250px-SpongeBob_SquarePants.jpg)
-		* Next State: state1/state2/state12/state3
+		* Next State: state3
 
 	* Input: "吃大八"
 		* Reply: "你走進去了大八，詢問：「請問[自助餐]/[牛排館]有開嗎？」"
 		* Next State: state1
 		
 	* Input: "吃香格里拉"
-		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，並且你口中喊著：「[是]」然後你走出香格里拉，邁向海港。"
-		* Next State: state12
+		* Reply: "NOOOO!!!!!海港海港海港海港海港海港海港...(洗腦中)你被洗腦了，然後你走出香格里拉，邁向海港。"
+		* Next State: state12→state2
 
 	* Input: "吃海港"
 		* Reply: "您真是會選擇，好吃的自助餐在海港，猜猜看好吃的時段是甚麼時候？[下午茶]或[晚餐]？"
@@ -110,13 +106,7 @@ Every time `user` state is triggered to `advance` to another state, it will `go_
 	* Input: "不要"
 		* Reply: "經理：「不要？給我滾出去！海港不要有你這種客人！」"
 		* Reply: <img src="https://i.imgflip.com/13jurj.jpg" width = "300" height = "220"/>
-		* Next State: state10→user	
-
-* state12		
-	* Input: "是"
-		* Reply: "您真是會選擇，好吃的自助餐在海港，猜猜看好吃的時段是甚麼時候？[下午茶]或[晚餐]？"
-		* Next State: state2
-	
+		* Next State: state10→user		
 
 * **state1_3** or **state1_4** or **state1_5** or **state1_6** or  **state4** or **state7** or **state8** or **state10** or **state11** or **state13**
 	* Next State: user		
