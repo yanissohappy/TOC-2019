@@ -14,109 +14,109 @@ class TocMachine(GraphMachine):
         )
 
     def is_going_to_state1(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '吃大八'#輸入這兩個是很不可以的，只有海港比較好吃，這就是自助餐一言堂
         return False
 		
     def is_going_to_state1_1(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '自助餐'
         return False		
 		
     def is_going_to_state1_2(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '牛排館'
         return False		
 		
     def is_going_to_state1_3(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '4人'
         return False			
 		
     def is_going_to_state1_4(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '1人'
         return False					
 
     def is_going_to_state2(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '吃海港'
         return False
 
     def is_going_to_state3(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '使用說明'
         return False
 
     def is_going_to_state12(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '吃香格里拉' 
         return False        
 
     def is_going_to_state4(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '下午茶' #下午茶很難吃，我是認真的
         return False
 
     def is_going_to_state5(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '晚餐' #晚餐葛來分多得100000分
         return False
 
     def is_going_to_state6(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '生魚片' #很棒棒
         return False
 
     def is_going_to_state7(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '剩魚片' #糟糕了唷
         return False
 
     def is_going_to_state8(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '知道' #經理會給愛的鼓勵
         return False
 
     def is_going_to_state9(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '不知道' #經理會把你請出去（哪門子的經理？！）
         return False
 
     def is_going_to_state10(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '要' #跟經理環遊世界，很棒！
         return False
 
     def is_going_to_state11(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '不要' #不環遊世界，經理會把你請出去（again 哪門子的經理？！）
         return False
 
     def is_going_to_state13(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '故事情節'
         return False
 
     def is_going_to_state14(self, event):
-        if event.get("message"):
+        if event.get("message") and event['message'].get("text"):
             text = event['message']['text']
             return text.lower() == '是' 
         return False        
